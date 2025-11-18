@@ -1,4 +1,3 @@
-from contextlib import _BaseExitStack
 while True:
     print("Hello And Welcome to my basic Calculator")
 
@@ -9,23 +8,39 @@ while True:
     c = input("Enter the required opertion: - ")
 
     operators = ["+","-","/","*"]
+    
+    def addition():
+        return a+b
 
-    while c in operators:
+    def multiply():
+        return a*b
+    
+    def subtract():
+        return a-b
+    
+    def divsion():
+        return a/b
+
+    
+    if c in operators:
+
         if c == "+":
-            print("The Answer is:",(a+b))
+            print("The Answer is:",addition())
 
         elif c == "-":
-            print("The Answer is:",(a-b))
+            print("The Answer is:",subtract())
 
         elif c == "/":
-            print("The Answer is:",(a/b))
+            print("The Answer is:",divsion())
 
         elif c == "*":
-            print("The Answer is:",(a*b))
+            print("The Answer is:",multiply())
 
         else:
             print("How the fuck you reached here")
-        break
+        
+    else:
+        print("Wrong operation")
 
     y = input("Do you want to continue yes or no: -  ")
 
@@ -33,6 +48,5 @@ while True:
         break
     else:
         pass
-    print("It works")
 
 print("Thanks For Trying my Project")
