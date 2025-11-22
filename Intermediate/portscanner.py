@@ -17,5 +17,5 @@ for PORT in range(PORT1,(PORT2+1)):
         print(f'{PORT} is open')
 
     else:
-        pass
+        print(f'{PORT} is closed (Error: {Connect})')
     client.close()
